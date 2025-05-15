@@ -1,17 +1,22 @@
-// src/pages/es/contacto.astro
-const datosContacto = {
-  email: "eugenio@sinotectrans.com",
-  telefono: "+34 645 006 928"
-  Telegram: "@eugasr"};
 ---
-<form action="https://formspree.io/f/tu-id-de-formspree" method="POST">
-  <input type="text" name="nombre" placeholder="Nombre" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="mensaje" placeholder="¿En qué puedo ayudarte?" rows="5"></textarea>
-  <button type="submit">Enviar</button>
-</form>
+// src/pages/es/contacto.astro
+const titulo = "Contacto";
+const chineseLink = "/zh/联系";
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>{titulo} | SinotecTrans</title>
+</head>
+<body>
+  <h1>{titulo}</h1>
+  <a href={chineseLink}>中文版本</a>
 
-<address>
-  <p>📧 {datosContacto.email}</p>
-  <p>📞 {datosContacto.telefono}</p>
-</address>
+  <form action="https://formspree.io/f/tu-id" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
